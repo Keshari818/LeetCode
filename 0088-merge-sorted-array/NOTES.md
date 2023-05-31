@@ -1,0 +1,1 @@
+take two pointer one at arr1[n-1] and other at arr2[0]
