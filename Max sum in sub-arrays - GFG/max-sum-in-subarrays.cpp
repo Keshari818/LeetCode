@@ -11,7 +11,7 @@ class Solution{
         long long pairWithMaxSum(long long arr[], long long N)
     {
         // Your code goes here
-        long long res=-1;
+        long long res=arr[0];
         for(int i=0;i<N-1;i++){
             long long sum=arr[i]+arr[i+1];
             res=max(sum,res);
