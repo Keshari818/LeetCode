@@ -1,7 +1,7 @@
 class Solution {
 public:
     void rev(vector<int>& nums, int low,int high){
-        while(low<=high){
+        while(low<high){
             int temp=nums[low];
             nums[low]=nums[high];
             nums[high]=temp;
