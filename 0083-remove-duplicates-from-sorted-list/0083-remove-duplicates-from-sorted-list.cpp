@@ -17,10 +17,7 @@ public:
             while(curr && curr->val==temp->val){
                 curr=curr->next;        
             }
-            // if(curr==NULL&& temp->next!=NULL){
-            //     temp->next=NULL;
-            //     return head;
-            // }
+            
             temp->next=curr;
             temp=temp->next;
         }
