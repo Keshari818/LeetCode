@@ -11,7 +11,8 @@ public:
             }
             else{
                 s[j]=s[i];
-                i++;j--;
+                i++;
+                j--;
             }
         }
         return s;
