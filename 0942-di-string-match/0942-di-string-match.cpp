@@ -17,7 +17,7 @@ public:
                 pq.pop_back();
             }
         }
-        v.push_back(pq.back());
+        v.push_back(pq.front());
         return v;
     }
 };
