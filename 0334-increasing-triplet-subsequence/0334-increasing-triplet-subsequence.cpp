@@ -31,20 +31,20 @@ public:
         
         
         int n = nums.size();
-    if (n < 3) return false;
+        if (n < 3) return false;
     
-    int small = INT_MAX, big = INT_MAX;
+        int small = INT_MAX, big = INT_MAX;
     
-    for (int num : nums) {
-        if (num <= small) {
-            small = num;
-        } else if (num <= big) {
-            big = num;
-        } else {
-            return true;
+        for (int num : nums) {
+            if (num <= small) 
+                small = num;
+         
+            else if (num <= big)
+                big = num;
+            
+            else 
+                return true;
         }
-    }
-    
-    return false;
+        return false;
     }
 };
