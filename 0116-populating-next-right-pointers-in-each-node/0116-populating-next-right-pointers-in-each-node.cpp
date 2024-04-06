@@ -27,8 +27,8 @@ public:
         
         while (!q.empty()) {
             int n = q.size();
-            if(n==0)
-                return root;
+            // if(n==0)
+            //     return root;
             
             for (int i = 0; i < n; i++) {
                 Node* current;
