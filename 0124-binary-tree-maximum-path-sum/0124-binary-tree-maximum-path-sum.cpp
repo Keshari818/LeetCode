@@ -14,15 +14,14 @@ public:
     int solver(TreeNode* root,int &maxi){
         if(!root)
             return 0;
-        int left=max(0,solver(root->left,maxi));
-        int right=max(0,solver(root->right,maxi));
-        maxi=max(maxi,root->val+left+right);
-        return root->val+max(left,right);
-        // return maxi;
+        int left = max(0, solver(root->left, maxi));
+        int right = max(0, solver(root->right, maxi));
+        maxi = max(maxi, root->val + left + right);
+        return root->val + max(left, right);
     }
     int maxPathSum(TreeNode* root) {
-        int maxi=INT_MIN;
-        solver(root,maxi);
+        int maxi = INT_MIN;
+        solver(root, maxi);
         return maxi;
     }
 };
