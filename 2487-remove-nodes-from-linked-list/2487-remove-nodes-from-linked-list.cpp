@@ -11,25 +11,25 @@
 class Solution {
 public:
     ListNode* removeNodes(ListNode* head) {
-        ListNode* cur = head;
+        ListNode* curr = head;
         stack<ListNode*> st;
         
-        while (cur != nullptr) {
-            while (!st.empty() && st.top()->val < cur->val) {
+        while (curr != NULL) {
+            while (!st.empty() && st.top()->val < curr->val) {
                 st.pop();
             }
-            st.push(cur);
-            cur = cur->next;
+            st.push(curr);
+            curr = curr->next;
         }
         
-        ListNode* nxt = nullptr;
+        ListNode* nxt = NULL;
         while (!st.empty()) {
-            cur = st.top();
+            curr = st.top();
             st.pop();
-            cur->next = nxt;
-            nxt = cur;
+            curr->next = nxt;
+            nxt = curr;
         }
         
-        return cur;
+        return curr;
     }
 };
