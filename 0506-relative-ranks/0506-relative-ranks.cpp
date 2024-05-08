@@ -8,6 +8,8 @@ public:
         vector<string>a(size(q));
         while(!q.empty()){
             a[q.top().second]=i==0?"Gold Medal":i==1?"Silver Medal":i==2?"Bronze Medal":to_string(i+1);
+            
+            
             i++;
             q.pop();
         }
